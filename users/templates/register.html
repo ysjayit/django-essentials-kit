@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-sm-4">
+        <div class="mt-5">
+            <form action="" method="POST">
+                <h3>Register</h3>
+        
+                {% csrf_token %}
+        
+                {% for field in form %}
+                    <div class="custom-input">
+                        <label class="form-label">{{field.label}}</label>
+                        {{field}}
+                    </div>
+                {% endfor %}
+        
+                <button type="submit" value="submit" class="btn btn-primary mt-3">Register</button>
+            </form>
+            <a class="btn btn-outline-secondary mt-5" href="{% url 'login' %}">Login</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

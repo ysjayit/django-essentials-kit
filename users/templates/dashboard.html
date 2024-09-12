@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-sm-12">
+        <div class="mt-5">
+            <h1>User Dashboard</h1>
+            {% if profile %}
+                <p>Name: {{ profile.name|default:"N/A" }}</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
