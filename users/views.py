@@ -76,7 +76,7 @@ def user_logout(request):
 
 
 @login_required(login_url='login')
-@allowed_users(allowed_roles=['customer'])
+@allowed_users(allowed_roles=['users'])
 def user_settings(request):
     profile = request.user.userprofile
     form = UserProfileForm(instance=profile)
